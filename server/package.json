@@ -1,0 +1,17 @@
+{
+  "name": "colossal-website-server",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Backend API for the Colossal Info Solutions marketing site (lead capture, services, case studies).",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
+}

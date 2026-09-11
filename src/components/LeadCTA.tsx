@@ -38,7 +38,7 @@ export default function LeadCTA() {
   };
 
   return (
-    <section id="lead-capture" className="py-20 md:py-28" style={{ background: "#020505" }}>
+    <section id="lead-capture" className="py-20 md:py-28" style={{ background: "#061012" }}>
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
@@ -52,7 +52,7 @@ export default function LeadCTA() {
 
         <div
           className="rounded-2xl p-8 md:p-10"
-          style={{ background: "rgba(6,15,17,0.8)", backdropFilter: "blur(12px)", border: "1px solid rgba(34,211,238,0.25)", boxShadow: "0 4px 30px rgba(0,0,0,0.5), 0 0 60px rgba(34,211,238,0.12)" }}
+          style={{ background: "rgba(15,30,33,0.8)", backdropFilter: "blur(12px)", border: "1px solid rgba(34,211,238,0.25)", boxShadow: "0 4px 30px rgba(0,0,0,0.5), 0 0 60px rgba(34,211,238,0.12)" }}
         >
           {submitted ? (
             <div className="text-center py-8">
@@ -77,7 +77,7 @@ export default function LeadCTA() {
                     value={form.fullName}
                     onChange={update("fullName")}
                     className="w-full px-4 py-3 rounded-lg text-white placeholder:text-slate-500 focus:outline-none focus:ring-2"
-                    style={{ background: "rgba(3,9,11,0.8)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
+                    style={{ background: "rgba(12,24,27,0.85)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
                   />
                   <span
                     className="absolute left-0 -bottom-0.5 h-0.5 w-full origin-left scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-full"
@@ -93,7 +93,7 @@ export default function LeadCTA() {
                     value={form.workEmail}
                     onChange={update("workEmail")}
                     className="w-full px-4 py-3 rounded-lg text-white placeholder:text-slate-500 focus:outline-none focus:ring-2"
-                    style={{ background: "rgba(3,9,11,0.8)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
+                    style={{ background: "rgba(12,24,27,0.85)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
                   />
                   <span
                     className="absolute left-0 -bottom-0.5 h-0.5 w-full origin-left scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-full"
@@ -111,7 +111,7 @@ export default function LeadCTA() {
                   value={form.companyName}
                   onChange={update("companyName")}
                   className="w-full px-4 py-3 rounded-lg text-white placeholder:text-slate-500 focus:outline-none focus:ring-2"
-                  style={{ background: "rgba(3,9,11,0.8)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
+                  style={{ background: "rgba(12,24,27,0.85)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
                 />
                 <span
                   className="absolute left-0 -bottom-0.5 h-0.5 w-full origin-left scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-full"
@@ -126,7 +126,7 @@ export default function LeadCTA() {
                   value={form.budgetRange}
                   onChange={update("budgetRange")}
                   className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2"
-                  style={{ background: "rgba(3,9,11,0.8)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
+                  style={{ background: "rgba(12,24,27,0.85)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
                 >
                   <option value="" disabled className="bg-slate-900">
                     Select a range

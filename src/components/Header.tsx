@@ -16,9 +16,12 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled ? "bg-slate-900/95 backdrop-blur-md shadow-lg shadow-black/20" : "bg-slate-900"
-      }`}
+      className="sticky top-0 z-50 w-full transition-all duration-300 backdrop-blur-md"
+      style={{
+        background: scrolled ? "rgba(19,36,32,0.95)" : "#132420",
+        boxShadow: scrolled ? "0 4px 30px rgba(45,212,191,0.1)" : "none",
+        borderBottom: "1px solid rgba(45,212,191,0.12)",
+      }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 h-18 flex items-center justify-between" style={{ height: 72 }}>
         {/* Logo */}
@@ -46,7 +49,7 @@ export default function Header() {
           <a
             href="#lead-capture"
             className="px-5 py-2.5 rounded-lg font-bold text-sm text-slate-900 transition-transform hover:scale-105"
-            style={{ background: "#2dd4bf" }}
+            style={{ background: "#2dd4bf", boxShadow: "0 0 20px rgba(45,212,191,0.5)" }}
           >
             Book a Strategy Call
           </a>
@@ -64,7 +67,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-slate-900 border-t border-slate-800 px-6 py-4 flex flex-col gap-4">
+        <div className="lg:hidden px-6 py-4 flex flex-col gap-4" style={{ background: "#132420", borderTop: "1px solid rgba(45,212,191,0.12)" }}>
           {NAV_LINKS.map((link) => (
             <a
               key={link}

@@ -39,21 +39,22 @@ export default function Testimonials() {
   const t = TESTIMONIALS[index];
 
   return (
-    <section className="bg-slate-900 py-20 md:py-28">
+    <section className="py-20 md:py-28" style={{ background: "#132420" }}>
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <div
           className="rounded-2xl p-10 md:p-14 text-center"
           style={{
-            background: "rgba(17,24,39,0.6)",
+            background: "rgba(15,28,25,0.6)",
             backdropFilter: "blur(12px)",
-            border: "1px solid rgba(148,163,184,0.15)",
+            border: "1px solid rgba(45,212,191,0.2)",
+            boxShadow: "0 0 40px rgba(45,212,191,0.12)",
           }}
         >
           <div
-            className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6"
-            style={{ background: "rgba(45,212,191,0.12)", boxShadow: "0 0 24px rgba(45,212,191,0.25)" }}
+            className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+            style={{ background: "linear-gradient(135deg, rgba(74,222,128,0.2), rgba(45,212,191,0.2))", boxShadow: "0 0 40px rgba(45,212,191,0.4)" }}
           >
-            <Quote className="w-6 h-6" style={{ color: "#2dd4bf" }} />
+            <Quote className="w-7 h-7" style={{ color: "#4ade80" }} />
           </div>
           <p key={index} className="text-xl md:text-2xl font-medium text-white leading-relaxed mb-8 tracking-tight">
             &ldquo;{t.quote}&rdquo;
@@ -61,7 +62,7 @@ export default function Testimonials() {
           <div className="flex items-center justify-center gap-3">
             <div
               className="w-11 h-11 rounded-full flex items-center justify-center font-bold text-slate-900 shrink-0"
-              style={{ background: "#2dd4bf" }}
+              style={{ background: "linear-gradient(135deg, #4ade80, #2dd4bf)", boxShadow: "0 0 20px rgba(45,212,191,0.4)" }}
             >
               {t.name.split(" ").map((p) => p[0]).join("")}
             </div>

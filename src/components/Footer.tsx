@@ -13,13 +13,16 @@ const LEGAL_LINKS = ["GDPR", "Privacy Policy", "Terms of Service"];
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-400 pt-16 pb-8">
+    <footer className="text-slate-400 pt-16 pb-8" style={{ background: "#0a1512", borderTop: "1px solid rgba(45,212,191,0.1)" }}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Company info */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-slate-900" style={{ background: "#2dd4bf" }}>
+              <div
+                className="w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-slate-900"
+                style={{ background: "linear-gradient(135deg, #4ade80, #2dd4bf)", boxShadow: "0 0 16px rgba(45,212,191,0.4)" }}
+              >
                 C
               </div>
               <span className="text-white font-bold">Colossal Info Solutions</span>
@@ -81,7 +84,11 @@ export default function Footer() {
             {/* Certification badges - placeholders until real partner/cert status is confirmed */}
             <div className="flex flex-wrap gap-2">
               {["AWS Partner", "ISO 27001", "Google Partner"].map((badge) => (
-                <span key={badge} className="text-[10px] font-bold uppercase tracking-wide px-2.5 py-1 rounded border border-slate-700 text-slate-500">
+                <span
+                  key={badge}
+                  className="text-[10px] font-bold uppercase tracking-wide px-2.5 py-1 rounded text-slate-400"
+                  style={{ border: "1px solid rgba(45,212,191,0.25)", boxShadow: "0 0 10px rgba(45,212,191,0.1)" }}
+                >
                   {badge}
                 </span>
               ))}
@@ -89,7 +96,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+        <div className="pt-6 text-center text-xs text-slate-500" style={{ borderTop: "1px solid rgba(45,212,191,0.1)" }}>
           © {new Date().getFullYear()} Colossal Info Solutions. All rights reserved.
         </div>
       </div>

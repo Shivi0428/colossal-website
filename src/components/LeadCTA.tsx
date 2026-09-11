@@ -38,7 +38,7 @@ export default function LeadCTA() {
   };
 
   return (
-    <section id="lead-capture" className="py-20 md:py-28" style={{ background: "#0d1a17" }}>
+    <section id="lead-capture" className="py-20 md:py-28" style={{ background: "#020505" }}>
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
@@ -52,13 +52,13 @@ export default function LeadCTA() {
 
         <div
           className="rounded-2xl p-8 md:p-10"
-          style={{ background: "rgba(15,28,25,0.6)", backdropFilter: "blur(12px)", border: "1px solid rgba(45,212,191,0.2)", boxShadow: "0 0 40px rgba(45,212,191,0.1)" }}
+          style={{ background: "rgba(6,15,17,0.8)", backdropFilter: "blur(12px)", border: "1px solid rgba(34,211,238,0.25)", boxShadow: "0 4px 30px rgba(0,0,0,0.5), 0 0 60px rgba(34,211,238,0.12)" }}
         >
           {submitted ? (
             <div className="text-center py-8">
               <div
                 className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl"
-                style={{ background: "rgba(74,222,128,0.15)", color: "#4ade80", boxShadow: "0 0 24px rgba(74,222,128,0.3)" }}
+                style={{ background: "rgba(34,211,238,0.15)", color: "#22d3ee", boxShadow: "0 0 24px rgba(34,211,238,0.4)" }}
               >
                 ✓
               </div>
@@ -77,11 +77,11 @@ export default function LeadCTA() {
                     value={form.fullName}
                     onChange={update("fullName")}
                     className="w-full px-4 py-3 rounded-lg text-white placeholder:text-slate-500 focus:outline-none focus:ring-2"
-                    style={{ background: "rgba(13,26,23,0.7)", border: "1px solid rgba(74,222,128,0.25)", "--tw-ring-color": "#4ade80" } as React.CSSProperties}
+                    style={{ background: "rgba(3,9,11,0.8)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
                   />
                   <span
                     className="absolute left-0 -bottom-0.5 h-0.5 w-full origin-left scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-full"
-                    style={{ background: "linear-gradient(90deg, #4ade80, #2dd4bf)", boxShadow: "0 0 12px rgba(45,212,191,0.7)" }}
+                    style={{ background: "linear-gradient(90deg, #2dd4bf, #22d3ee)", boxShadow: "0 0 14px rgba(34,211,238,0.8)" }}
                   />
                 </div>
                 <div className="relative group">
@@ -93,11 +93,11 @@ export default function LeadCTA() {
                     value={form.workEmail}
                     onChange={update("workEmail")}
                     className="w-full px-4 py-3 rounded-lg text-white placeholder:text-slate-500 focus:outline-none focus:ring-2"
-                    style={{ background: "rgba(13,26,23,0.7)", border: "1px solid rgba(74,222,128,0.25)", "--tw-ring-color": "#4ade80" } as React.CSSProperties}
+                    style={{ background: "rgba(3,9,11,0.8)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
                   />
                   <span
                     className="absolute left-0 -bottom-0.5 h-0.5 w-full origin-left scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-full"
-                    style={{ background: "linear-gradient(90deg, #4ade80, #2dd4bf)", boxShadow: "0 0 12px rgba(45,212,191,0.7)" }}
+                    style={{ background: "linear-gradient(90deg, #2dd4bf, #22d3ee)", boxShadow: "0 0 14px rgba(34,211,238,0.8)" }}
                   />
                 </div>
               </div>
@@ -111,11 +111,11 @@ export default function LeadCTA() {
                   value={form.companyName}
                   onChange={update("companyName")}
                   className="w-full px-4 py-3 rounded-lg text-white placeholder:text-slate-500 focus:outline-none focus:ring-2"
-                  style={{ background: "rgba(13,26,23,0.7)", border: "1px solid rgba(74,222,128,0.25)", "--tw-ring-color": "#4ade80" } as React.CSSProperties}
+                  style={{ background: "rgba(3,9,11,0.8)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
                 />
                 <span
                   className="absolute left-0 -bottom-0.5 h-0.5 w-full origin-left scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-full"
-                  style={{ background: "linear-gradient(90deg, #4ade80, #2dd4bf)", boxShadow: "0 0 12px rgba(45,212,191,0.7)" }}
+                  style={{ background: "linear-gradient(90deg, #2dd4bf, #22d3ee)", boxShadow: "0 0 14px rgba(34,211,238,0.8)" }}
                 />
               </div>
 
@@ -126,7 +126,7 @@ export default function LeadCTA() {
                   value={form.budgetRange}
                   onChange={update("budgetRange")}
                   className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2"
-                  style={{ background: "rgba(13,26,23,0.7)", border: "1px solid rgba(74,222,128,0.25)", "--tw-ring-color": "#4ade80" } as React.CSSProperties}
+                  style={{ background: "rgba(3,9,11,0.8)", border: "1px solid rgba(34,211,238,0.3)", "--tw-ring-color": "#22d3ee" } as React.CSSProperties}
                 >
                   <option value="" disabled className="bg-slate-900">
                     Select a range
@@ -139,7 +139,7 @@ export default function LeadCTA() {
                 </select>
                 <span
                   className="absolute left-0 -bottom-0.5 h-0.5 w-full origin-left scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-full"
-                  style={{ background: "linear-gradient(90deg, #4ade80, #2dd4bf)", boxShadow: "0 0 12px rgba(45,212,191,0.7)" }}
+                  style={{ background: "linear-gradient(90deg, #2dd4bf, #22d3ee)", boxShadow: "0 0 14px rgba(34,211,238,0.8)" }}
                 />
               </div>
 
@@ -153,7 +153,7 @@ export default function LeadCTA() {
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full py-4 rounded-lg font-bold text-slate-900 transition-transform hover:scale-[1.02] disabled:opacity-60"
-                style={{ background: "linear-gradient(135deg, #4ade80, #2dd4bf)", boxShadow: "0 0 30px rgba(45,212,191,0.5)" }}
+                style={{ background: "linear-gradient(135deg, #2dd4bf, #22d3ee)", boxShadow: "0 0 20px rgba(34,211,238,0.6), 0 0 55px rgba(45,212,191,0.35)" }}
               >
                 {isSubmitting ? "Sending…" : "Request Free Consultation"}
               </button>

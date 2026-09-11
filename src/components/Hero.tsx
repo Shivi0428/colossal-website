@@ -1,8 +1,21 @@
 const CLIENT_LOGOS = ["FinServe Group", "MedTrust Health", "Nimbus SaaS", "Halcyon Bank", "Vertex Retail", "Northgate Capital"];
+// Duplicated so the ticker can loop seamlessly (translateX(-50%) lands exactly
+// back on the same visual position as the start).
+const TICKER_LOGOS = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden text-white" style={{ background: "#132420" }}>
+      <style>{`
+        @keyframes heroGlowBreathe {
+          0%, 100% { opacity: 0.7; transform: translate(-50%, 0) scale(0.94); }
+          50% { opacity: 1; transform: translate(-50%, 0) scale(1.06); }
+        }
+        .hero-glow-breathe { animation: heroGlowBreathe 6s ease-in-out infinite; }
+
+        @keyframes heroLogoScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .hero-logo-scroll { animation: heroLogoScroll 28s linear infinite; }
+      `}</style>
       {/* Subtle background grid */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.1]"
@@ -27,9 +40,9 @@ export default function Hero() {
         style={{ background: "radial-gradient(circle, rgba(74,222,128,0.22) 0%, transparent 70%)" }}
       />
 
-      {/* Glowing radial gradient directly behind the headline - teal */}
+      {/* Glowing radial gradient directly behind the headline - teal, slowly breathing */}
       <div
-        className="absolute top-24 left-1/2 -translate-x-1/2 w-[1000px] h-[550px] pointer-events-none"
+        className="hero-glow-breathe absolute top-24 left-1/2 w-[1000px] h-[550px] pointer-events-none"
         style={{ background: "radial-gradient(ellipse at center, rgba(45,212,191,0.35) 0%, transparent 65%)" }}
       />
 
@@ -38,7 +51,7 @@ export default function Hero() {
           We Build Digital Products &amp; Marketing Engines That{" "}
           <span
             className="bg-clip-text text-transparent"
-            style={{ backgroundImage: "linear-gradient(90deg, #4ade80, #2dd4bf)", textShadow: "0 0 60px rgba(45,212,191,0.4)" }}
+            style={{ backgroundImage: "linear-gradient(90deg, #4ade80, #2dd4bf)", textShadow: "0 0 50px rgba(45,212,191,0.3)" }}
           >
             Scale Business Revenue.
           </span>
@@ -68,17 +81,31 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Trust bar */}
+        {/* Trust bar - continuous scrolling ticker */}
         <div>
           <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-5">
             Trusted by industry leaders in Finance, Healthcare, and SaaS
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            {CLIENT_LOGOS.map((name) => (
-              <span key={name} className="text-slate-500 font-bold text-sm tracking-wide">
-                {name}
-              </span>
-            ))}
+          <div
+            className="relative overflow-hidden mx-auto"
+            style={{
+              maxWidth: 900,
+              maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+              WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            }}
+          >
+            <div className="hero-logo-scroll flex items-center gap-14 w-max">
+              {TICKER_LOGOS.map((name, i) => (
+                <span
+                  key={`${name}-${i}`}
+                  className="text-slate-500 font-bold text-sm tracking-wide whitespace-nowrap transition-colors duration-300 cursor-default"
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#4ade80")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "")}
+                >
+                  {name}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

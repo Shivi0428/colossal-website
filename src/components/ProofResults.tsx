@@ -10,21 +10,24 @@ const RESULTS = [
     metric: "+240%",
     label: "Organic Lead Growth in 90 Days",
     client: "FinTech Client",
-    color: "#4ade80", // green
+    accent: "#4ade80",
+    soft: "#86efac",
   },
   {
     icon: ShieldCheck,
     metric: "99.99%",
     label: "Uptime via AWS Cloud Migration",
     client: "Healthcare Provider",
-    color: "#2dd4bf", // teal
+    accent: "#2dd4bf",
+    soft: "#5eead4",
   },
   {
     icon: DollarSign,
     metric: "$4.2M",
     label: "ARR Generated from Custom Web Platform",
     client: "E-commerce Brand",
-    color: "#34d399", // emerald
+    accent: "#34d399",
+    soft: "#6ee7b7",
   },
 ];
 
@@ -39,41 +42,50 @@ export default function ProofResults() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {RESULTS.map(({ icon: Icon, metric, label, client, color }) => (
+          {RESULTS.map(({ icon: Icon, metric, label, client, accent, soft }) => (
             <div
               key={label}
-              className="group relative rounded-2xl p-8 transition-all duration-300"
+              className="group relative rounded-2xl p-8 transition-all duration-300 overflow-hidden"
               style={{
                 background: "rgba(19,36,32,0.6)",
                 backdropFilter: "blur(12px)",
-                border: `1px solid ${color}30`,
-                boxShadow: `0 0 26px ${color}22`,
+                border: `1px solid ${accent}25`,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = color;
-                e.currentTarget.style.boxShadow = `0 0 50px ${color}40`;
+                e.currentTarget.style.borderColor = `${accent}60`;
+                e.currentTarget.style.boxShadow = `0 12px 40px -8px ${accent}35`;
+                e.currentTarget.style.transform = "translateY(-6px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = `${color}30`;
-                e.currentTarget.style.boxShadow = `0 0 26px ${color}22`;
+                e.currentTarget.style.borderColor = `${accent}25`;
+                e.currentTarget.style.boxShadow = "none";
+                e.currentTarget.style.transform = "translateY(0)";
               }}
             >
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{ background: `linear-gradient(135deg, ${accent}0d 0%, transparent 50%)` }}
+              />
               {/* Glowing accent marker */}
               <div
                 className="absolute -top-3 -left-3 w-8 h-8 rounded-full"
-                style={{ background: color, boxShadow: `0 0 24px ${color}, 0 0 48px ${color}80` }}
+                style={{ background: accent, boxShadow: `0 0 24px ${accent}, 0 0 48px ${accent}80` }}
               />
-              <Icon className="w-8 h-8 mb-5" style={{ color }} />
-              <div className="text-4xl font-extrabold text-white mb-2 tabular-nums">
-                <AnimatedCounter value={metric} />
+              <div className="relative">
+                <Icon className="w-8 h-8 mb-5" style={{ color: soft }} />
+                <div className="text-4xl font-extrabold text-white mb-2 tabular-nums">
+                  <AnimatedCounter value={metric} />
+                </div>
+                <p style={{ color: "#CBD5E1" }} className="font-medium mb-4">
+                  {label}
+                </p>
+                <span
+                  className="inline-block text-xs font-bold uppercase tracking-wide px-2.5 py-1 rounded-full"
+                  style={{ background: `${accent}18`, color: soft, border: `1px solid ${accent}30` }}
+                >
+                  {client}
+                </span>
               </div>
-              <p className="text-slate-400 font-medium mb-4">{label}</p>
-              <span
-                className="inline-block text-xs font-bold uppercase tracking-wide px-2.5 py-1 rounded-full"
-                style={{ background: `${color}18`, color, border: `1px solid ${color}35` }}
-              >
-                {client}
-              </span>
             </div>
           ))}
         </div>

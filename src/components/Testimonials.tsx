@@ -54,7 +54,7 @@ export default function Testimonials() {
             className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
             style={{ background: "linear-gradient(135deg, rgba(74,222,128,0.2), rgba(45,212,191,0.2))", boxShadow: "0 0 40px rgba(45,212,191,0.4)" }}
           >
-            <Quote className="w-7 h-7" style={{ color: "#4ade80" }} />
+            <Quote className="w-7 h-7" style={{ color: "#86efac" }} />
           </div>
           <p key={index} className="text-xl md:text-2xl font-medium text-white leading-relaxed mb-8 tracking-tight">
             &ldquo;{t.quote}&rdquo;
@@ -68,7 +68,7 @@ export default function Testimonials() {
             </div>
             <div className="text-left">
               <div className="font-bold text-white text-sm">{t.name}</div>
-              <div className="text-slate-400 text-sm">
+              <div className="text-sm" style={{ color: "#CBD5E1" }}>
                 {t.title}, {t.company}
               </div>
             </div>

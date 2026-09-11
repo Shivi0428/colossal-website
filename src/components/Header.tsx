@@ -48,8 +48,16 @@ export default function Header() {
         <div className="hidden lg:block">
           <a
             href="#lead-capture"
-            className="px-5 py-2.5 rounded-lg font-bold text-sm text-slate-900 transition-transform hover:scale-105"
-            style={{ background: "#2dd4bf", boxShadow: "0 0 20px rgba(45,212,191,0.5)" }}
+            className="px-5 py-2.5 rounded-lg font-bold text-sm text-white transition-all"
+            style={{ border: "1px solid rgba(94,234,212,0.4)", background: "transparent" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "rgba(45,212,191,0.1)";
+              e.currentTarget.style.borderColor = "#2dd4bf";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.borderColor = "rgba(94,234,212,0.4)";
+            }}
           >
             Book a Strategy Call
           </a>
@@ -80,8 +88,8 @@ export default function Header() {
           ))}
           <a
             href="#lead-capture"
-            className="mt-2 px-5 py-2.5 rounded-lg font-bold text-sm text-slate-900 text-center"
-            style={{ background: "#2dd4bf" }}
+            className="mt-2 px-5 py-2.5 rounded-lg font-bold text-sm text-white text-center"
+            style={{ border: "1px solid rgba(94,234,212,0.4)" }}
             onClick={() => setMobileOpen(false)}
           >
             Book a Strategy Call

@@ -5,19 +5,22 @@ const DIFFERENTIATORS = [
     icon: Users,
     title: "Dedicated Senior Team",
     copy: "Direct access to veteran engineers and strategists — no junior hand-offs.",
-    color: "#2dd4bf",
+    accent: "#2dd4bf",
+    soft: "#5eead4",
   },
   {
     icon: BarChart3,
     title: "Transparent Reporting",
     copy: "Live dashboard access to track every pipeline metric, code commit, and ad spend dollar in real time.",
-    color: "#4ade80",
+    accent: "#4ade80",
+    soft: "#86efac",
   },
   {
     icon: Lock,
     title: "Built for Security",
     copy: "Bank-grade security standards, GDPR/HIPAA compliance, and robust data protection protocols.",
-    color: "#34d399",
+    accent: "#34d399",
+    soft: "#6ee7b7",
   },
 ];
 
@@ -30,16 +33,18 @@ export default function WhyUs() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {DIFFERENTIATORS.map(({ icon: Icon, title, copy, color }) => (
-            <div key={title} className="flex flex-col items-start">
+          {DIFFERENTIATORS.map(({ icon: Icon, title, copy, accent, soft }) => (
+            <div key={title} className="flex flex-col items-start transition-transform duration-300 hover:-translate-y-1">
               <div
                 className="w-12 h-12 rounded-lg flex items-center justify-center mb-5"
-                style={{ background: `${color}22`, boxShadow: `0 0 24px ${color}40` }}
+                style={{ background: `${accent}18`, boxShadow: `0 0 20px ${accent}25` }}
               >
-                <Icon className="w-6 h-6" style={{ color }} />
+                <Icon className="w-6 h-6" style={{ color: soft }} />
               </div>
               <h3 className="text-lg font-bold mb-2">{title}</h3>
-              <p className="text-slate-400 leading-relaxed">{copy}</p>
+              <p style={{ color: "#CBD5E1" }} className="leading-relaxed">
+                {copy}
+              </p>
             </div>
           ))}
         </div>

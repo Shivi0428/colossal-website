@@ -13,7 +13,7 @@ const LEGAL_LINKS = ["GDPR", "Privacy Policy", "Terms of Service"];
 
 export default function Footer() {
   return (
-    <footer className="text-slate-400 pt-16 pb-8" style={{ background: "#0a1512", borderTop: "1px solid rgba(45,212,191,0.1)" }}>
+    <footer className="pt-16 pb-8" style={{ background: "#0a1512", borderTop: "1px solid rgba(45,212,191,0.1)", color: "#CBD5E1" }}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Company info */}

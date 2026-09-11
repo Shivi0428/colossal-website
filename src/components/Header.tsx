@@ -18,7 +18,7 @@ export default function Header() {
     <header
       className="sticky top-0 z-50 w-full transition-all duration-300 backdrop-blur-md"
       style={{
-        background: scrolled ? "rgba(3,9,11,0.9)" : "#050a0c",
+        background: scrolled ? "rgba(10,22,25,0.9)" : "#0a1618",
         boxShadow: scrolled ? "0 4px 40px rgba(34,211,238,0.15)" : "none",
         borderBottom: "1px solid rgba(34,211,238,0.15)",
       }}
@@ -75,7 +75,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden px-6 py-4 flex flex-col gap-4" style={{ background: "#050a0c", borderTop: "1px solid rgba(34,211,238,0.15)" }}>
+        <div className="lg:hidden px-6 py-4 flex flex-col gap-4" style={{ background: "#0a1618", borderTop: "1px solid rgba(34,211,238,0.15)" }}>
           {NAV_LINKS.map((link) => (
             <a
               key={link}

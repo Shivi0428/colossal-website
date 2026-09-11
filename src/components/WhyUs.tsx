@@ -26,7 +26,7 @@ const DIFFERENTIATORS = [
 
 export default function WhyUs() {
   return (
-    <section id="about" className="text-white py-20 md:py-28" style={{ background: "#050a0c" }}>
+    <section id="about" className="text-white py-20 md:py-28" style={{ background: "#0a1618" }}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-3">Why Work With Us</h2>

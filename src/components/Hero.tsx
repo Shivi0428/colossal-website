@@ -5,7 +5,7 @@ const TICKER_LOGOS = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden text-white" style={{ background: "#050a0c" }}>
+    <section id="top" className="relative overflow-hidden text-white" style={{ background: "#0a1618" }}>
       <style>{`
         @keyframes heroGlowBreathe {
           0%, 100% { opacity: 0.65; transform: translate(-50%, 0) scale(0.92); }

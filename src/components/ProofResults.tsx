@@ -33,7 +33,7 @@ const RESULTS = [
 
 export default function ProofResults() {
   return (
-    <section id="case-studies" className="py-20 md:py-28" style={{ background: "#020505" }}>
+    <section id="case-studies" className="py-20 md:py-28" style={{ background: "#061012" }}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
@@ -47,7 +47,7 @@ export default function ProofResults() {
               key={label}
               className="group relative rounded-2xl p-8 transition-all duration-300 overflow-hidden"
               style={{
-                background: "rgba(6,15,17,0.8)",
+                background: "rgba(15,30,33,0.8)",
                 backdropFilter: "blur(12px)",
                 border: `1px solid ${accent}30`,
                 boxShadow: "0 4px 20px rgba(0,0,0,0.5)",

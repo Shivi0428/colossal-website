@@ -39,12 +39,12 @@ export default function Testimonials() {
   const t = TESTIMONIALS[index];
 
   return (
-    <section className="py-20 md:py-28" style={{ background: "#050a0c" }}>
+    <section className="py-20 md:py-28" style={{ background: "#0a1618" }}>
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <div
           className="rounded-2xl p-10 md:p-14 text-center"
           style={{
-            background: "rgba(6,15,17,0.8)",
+            background: "rgba(15,30,33,0.8)",
             backdropFilter: "blur(12px)",
             border: "1px solid rgba(34,211,238,0.25)",
             boxShadow: "0 4px 30px rgba(0,0,0,0.5), 0 0 60px rgba(34,211,238,0.15)",

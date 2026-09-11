@@ -1,10 +1,10 @@
 const CORE_SERVICES = [
-  "Software Development",
+  "Website Development",
   "Mobile App Development",
+  "Workflow Automation",
+  "Software & Cloud Engineering",
   "Digital Marketing",
-  "Consulting Services",
-  "ERP Solutions",
-  "Cloud Transformation",
+  "Strategic Tech Consulting",
 ];
 
 const QUICK_LINKS = ["Services", "Case Studies", "About", "Insights"];
@@ -13,7 +13,7 @@ const LEGAL_LINKS = ["GDPR", "Privacy Policy", "Terms of Service"];
 
 export default function Footer() {
   return (
-    <footer className="pt-16 pb-8" style={{ background: "#020505", borderTop: "1px solid rgba(34,211,238,0.15)", color: "#CBD5E1" }}>
+    <footer className="pt-16 pb-8" style={{ background: "#061012", borderTop: "1px solid rgba(34,211,238,0.15)", color: "#CBD5E1" }}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Company info */}

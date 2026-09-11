@@ -44,7 +44,7 @@ export default function LeadCTA() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
             Ready to Scale Your Digital Architecture?
           </h2>
-          <p className="text-lg text-slate-400 max-w-xl mx-auto leading-relaxed">
+          <p className="text-lg max-w-xl mx-auto leading-relaxed" style={{ color: "#CBD5E1" }}>
             Book a free 30-minute technical and marketing audit with a principal partner. No hard
             sales pitch — just actionable steps.
           </p>
@@ -63,12 +63,12 @@ export default function LeadCTA() {
                 ✓
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Request received</h3>
-              <p className="text-slate-400">We'll be in touch within one business day to schedule your audit.</p>
+              <p style={{ color: "#CBD5E1" }}>We'll be in touch within one business day to schedule your audit.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
+                <div className="relative group">
                   <label className="block text-sm font-semibold text-slate-300 mb-1.5">Full Name</label>
                   <input
                     required
@@ -79,8 +79,12 @@ export default function LeadCTA() {
                     className="w-full px-4 py-3 rounded-lg text-white placeholder:text-slate-500 focus:outline-none focus:ring-2"
                     style={{ background: "rgba(13,26,23,0.7)", border: "1px solid rgba(74,222,128,0.25)", "--tw-ring-color": "#4ade80" } as React.CSSProperties}
                   />
+                  <span
+                    className="absolute left-0 -bottom-0.5 h-0.5 w-full origin-left scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-full"
+                    style={{ background: "linear-gradient(90deg, #4ade80, #2dd4bf)", boxShadow: "0 0 12px rgba(45,212,191,0.7)" }}
+                  />
                 </div>
-                <div>
+                <div className="relative group">
                   <label className="block text-sm font-semibold text-slate-300 mb-1.5">Work Email</label>
                   <input
                     required
@@ -91,10 +95,14 @@ export default function LeadCTA() {
                     className="w-full px-4 py-3 rounded-lg text-white placeholder:text-slate-500 focus:outline-none focus:ring-2"
                     style={{ background: "rgba(13,26,23,0.7)", border: "1px solid rgba(74,222,128,0.25)", "--tw-ring-color": "#4ade80" } as React.CSSProperties}
                   />
+                  <span
+                    className="absolute left-0 -bottom-0.5 h-0.5 w-full origin-left scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-full"
+                    style={{ background: "linear-gradient(90deg, #4ade80, #2dd4bf)", boxShadow: "0 0 12px rgba(45,212,191,0.7)" }}
+                  />
                 </div>
               </div>
 
-              <div>
+              <div className="relative group">
                 <label className="block text-sm font-semibold text-slate-300 mb-1.5">Company Name</label>
                 <input
                   required
@@ -105,9 +113,13 @@ export default function LeadCTA() {
                   className="w-full px-4 py-3 rounded-lg text-white placeholder:text-slate-500 focus:outline-none focus:ring-2"
                   style={{ background: "rgba(13,26,23,0.7)", border: "1px solid rgba(74,222,128,0.25)", "--tw-ring-color": "#4ade80" } as React.CSSProperties}
                 />
+                <span
+                  className="absolute left-0 -bottom-0.5 h-0.5 w-full origin-left scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-full"
+                  style={{ background: "linear-gradient(90deg, #4ade80, #2dd4bf)", boxShadow: "0 0 12px rgba(45,212,191,0.7)" }}
+                />
               </div>
 
-              <div>
+              <div className="relative group">
                 <label className="block text-sm font-semibold text-slate-300 mb-1.5">Project Budget</label>
                 <select
                   required
@@ -125,6 +137,10 @@ export default function LeadCTA() {
                     </option>
                   ))}
                 </select>
+                <span
+                  className="absolute left-0 -bottom-0.5 h-0.5 w-full origin-left scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-full"
+                  style={{ background: "linear-gradient(90deg, #4ade80, #2dd4bf)", boxShadow: "0 0 12px rgba(45,212,191,0.7)" }}
+                />
               </div>
 
               {error && (

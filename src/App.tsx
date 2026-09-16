@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ValueProps from "./components/ValueProps";
+import Portfolio from "./components/Portfolio";
 import ProofResults from "./components/ProofResults";
 import WhyUs from "./components/WhyUs";
 import Testimonials from "./components/Testimonials";
@@ -14,6 +15,7 @@ export default function App() {
       <main>
         <Hero />
         <ValueProps />
+        <Portfolio />
         <ProofResults />
         <WhyUs />
         <Testimonials />

@@ -4,7 +4,7 @@ const VALUE_PROPS = [
   {
     icon: Globe,
     title: "Website Development",
-    copy: "Fast, modern, SEO-ready websites built on a real codebase — not a page builder — so they scale with your business.",
+    copy: "Fast, modern, conversion-ready websites built on a real codebase — not a page builder — so they scale with your business.",
     accent: "#0D9488", // teal
     bg: "#F0FDFA",
   },
@@ -32,7 +32,7 @@ const VALUE_PROPS = [
   {
     icon: LineChart,
     title: "Performance Digital Marketing",
-    copy: "Data-driven SEO, PPC, and funnel optimization that consistently deliver measurable ROI and qualified sales leads.",
+    copy: "Data-driven PPC and funnel optimization that consistently deliver measurable ROI and qualified sales leads.",
     accent: "#0891B2",
     bg: "#ECFEFF",
   },

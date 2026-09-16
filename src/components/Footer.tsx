@@ -13,15 +13,15 @@ const LEGAL_LINKS = ["GDPR", "Privacy Policy", "Terms of Service"];
 
 export default function Footer() {
   return (
-    <footer className="pt-16 pb-8" style={{ background: "#061012", borderTop: "1px solid rgba(34,211,238,0.15)", color: "#CBD5E1" }}>
+    <footer className="pt-16 pb-8" style={{ background: "#1E293B", color: "#94A3B8" }}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Company info */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
               <div
-                className="w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-slate-900"
-                style={{ background: "linear-gradient(135deg, #2dd4bf, #22d3ee)", boxShadow: "0 0 16px rgba(34,211,238,0.5)" }}
+                className="w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-white"
+                style={{ background: "linear-gradient(135deg, #0d9488, #0891b2)" }}
               >
                 C
               </div>
@@ -86,8 +86,8 @@ export default function Footer() {
               {["AWS Partner", "ISO 27001", "Google Partner"].map((badge) => (
                 <span
                   key={badge}
-                  className="text-[10px] font-bold uppercase tracking-wide px-2.5 py-1 rounded text-slate-400"
-                  style={{ border: "1px solid rgba(34,211,238,0.3)", boxShadow: "0 0 10px rgba(34,211,238,0.15)" }}
+                  className="text-[10px] font-bold uppercase tracking-wide px-2.5 py-1 rounded text-slate-300"
+                  style={{ border: "1px solid #334155" }}
                 >
                   {badge}
                 </span>
@@ -96,7 +96,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-6 text-center text-xs text-slate-500" style={{ borderTop: "1px solid rgba(34,211,238,0.15)" }}>
+        <div className="pt-6 text-center text-xs" style={{ borderTop: "1px solid #334155", color: "#64748B" }}>
           © {new Date().getFullYear()} Colossal Info Solutions. All rights reserved.
         </div>
       </div>

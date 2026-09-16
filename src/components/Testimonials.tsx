@@ -39,36 +39,35 @@ export default function Testimonials() {
   const t = TESTIMONIALS[index];
 
   return (
-    <section className="py-20 md:py-28" style={{ background: "#0a1618" }}>
+    <section className="py-20 md:py-28" style={{ background: "#F8FAFC" }}>
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <div
           className="rounded-2xl p-10 md:p-14 text-center"
           style={{
-            background: "rgba(15,30,33,0.8)",
-            backdropFilter: "blur(12px)",
-            border: "1px solid rgba(34,211,238,0.25)",
-            boxShadow: "0 4px 30px rgba(0,0,0,0.5), 0 0 60px rgba(34,211,238,0.15)",
+            background: "#ffffff",
+            border: "1px solid #E2E8F0",
+            boxShadow: "0 4px 20px rgba(15,23,42,0.06)",
           }}
         >
           <div
             className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
-            style={{ background: "linear-gradient(135deg, rgba(34,211,238,0.2), rgba(45,212,191,0.2))", boxShadow: "0 0 40px rgba(34,211,238,0.45)" }}
+            style={{ background: "linear-gradient(135deg, #F0FDFA, #ECFEFF)" }}
           >
-            <Quote className="w-7 h-7" style={{ color: "#67e8f9" }} />
+            <Quote className="w-7 h-7" style={{ color: "#0891B2" }} />
           </div>
-          <p key={index} className="text-xl md:text-2xl font-medium text-white leading-relaxed mb-8 tracking-tight">
+          <p key={index} className="text-xl md:text-2xl font-medium text-slate-900 leading-relaxed mb-8 tracking-tight">
             &ldquo;{t.quote}&rdquo;
           </p>
           <div className="flex items-center justify-center gap-3">
             <div
-              className="w-11 h-11 rounded-full flex items-center justify-center font-bold text-slate-900 shrink-0"
-              style={{ background: "linear-gradient(135deg, #2dd4bf, #22d3ee)", boxShadow: "0 0 20px rgba(34,211,238,0.5)" }}
+              className="w-11 h-11 rounded-full flex items-center justify-center font-bold text-white shrink-0"
+              style={{ background: "linear-gradient(135deg, #0d9488, #0891b2)" }}
             >
               {t.name.split(" ").map((p) => p[0]).join("")}
             </div>
             <div className="text-left">
-              <div className="font-bold text-white text-sm">{t.name}</div>
-              <div className="text-sm" style={{ color: "#CBD5E1" }}>
+              <div className="font-bold text-slate-900 text-sm">{t.name}</div>
+              <div className="text-sm" style={{ color: "#64748B" }}>
                 {t.title}, {t.company}
               </div>
             </div>
@@ -84,7 +83,7 @@ export default function Testimonials() {
                 style={{
                   width: i === index ? 20 : 8,
                   height: 8,
-                  background: i === index ? "#22d3ee" : "rgba(148,163,184,0.3)",
+                  background: i === index ? "#0891B2" : "#E2E8F0",
                 }}
               />
             ))}

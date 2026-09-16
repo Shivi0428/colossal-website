@@ -13,6 +13,12 @@ export default function Hero() {
         }
         .hero-glow-breathe { animation: heroGlowBreathe 6s ease-in-out infinite; }
 
+        @keyframes heroTextBreathe {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.025); }
+        }
+        .hero-text-breathe { animation: heroTextBreathe 6s ease-in-out infinite; display: inline-block; }
+
         @keyframes heroLogoScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .hero-logo-scroll { animation: heroLogoScroll 28s linear infinite; }
       `}</style>
@@ -47,7 +53,7 @@ export default function Hero() {
       />
 
       <div className="relative max-w-5xl mx-auto px-6 lg:px-8 pt-20 pb-24 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6 text-slate-900">
+        <h1 className="hero-text-breathe text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6 text-slate-900">
           We Build Digital Products &amp; Marketing Engines That{" "}
           <span
             className="bg-clip-text text-transparent"

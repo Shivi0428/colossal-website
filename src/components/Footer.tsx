@@ -81,18 +81,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            {/* Certification badges - placeholders until real partner/cert status is confirmed */}
-            <div className="flex flex-wrap gap-2">
-              {["AWS Partner", "ISO 27001", "Google Partner"].map((badge) => (
-                <span
-                  key={badge}
-                  className="text-[10px] font-bold uppercase tracking-wide px-2.5 py-1 rounded text-slate-300"
-                  style={{ border: "1px solid #334155" }}
-                >
-                  {badge}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
 

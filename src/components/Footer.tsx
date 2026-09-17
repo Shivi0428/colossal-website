@@ -1,10 +1,10 @@
 const CORE_SERVICES = [
-  "Website Development",
+  "Software Development",
   "Mobile App Development",
-  "Workflow Automation",
-  "Software & Cloud Engineering",
   "Digital Marketing",
-  "Strategic Tech Consulting",
+  "Consulting Services",
+  "ERP Solutions",
+  "Cloud Transformation",
 ];
 
 const QUICK_LINKS = ["Services", "Case Studies", "About", "Insights"];

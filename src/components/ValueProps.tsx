@@ -1,45 +1,57 @@
-import { Cloud, LineChart, Network, Globe, Smartphone, Zap } from "lucide-react";
+import { Code2, LineChart, Users, Smartphone, Database, Cloud } from "lucide-react";
 
-const VALUE_PROPS = [
+export const VALUE_PROPS = [
   {
-    icon: Globe,
-    title: "Website Development",
-    copy: "Fast, modern, conversion-ready websites built on a real codebase — not a page builder — so they scale with your business.",
+    id: "service-software-development",
+    icon: Code2,
+    title: "Software Development",
+    copy: "Enterprise software built end to end — planning, UI/UX, development, QA, and deployment — on a real codebase, not a page builder.",
+    subServices: ["Enterprise Software Development", "UI/UX Creation", "QA & Software Testing"],
     accent: "#0D9488", // teal
     bg: "#F0FDFA",
   },
   {
+    id: "service-mobile-app-development",
     icon: Smartphone,
     title: "Mobile App Development",
-    copy: "Native-feeling iOS and Android apps from a single codebase, built for real-world usage and App Store approval.",
+    copy: "iOS, Android, and React Native apps from a team with 10+ years in mobile, built for real-world usage and App Store approval.",
+    subServices: ["iPad & iPhone App Development", "Android, iOS & React Native Development"],
     accent: "#0891B2", // cyan
     bg: "#ECFEFF",
   },
   {
-    icon: Zap,
-    title: "Workflow Automation",
-    copy: "We automate the repetitive parts of your operations — data entry, reporting, approvals — so your team spends time on what matters.",
+    id: "service-digital-marketing",
+    icon: LineChart,
+    title: "Digital Marketing",
+    copy: "Data-driven PPC and funnel optimization that consistently deliver measurable ROI and qualified sales leads.",
+    subServices: ["PPC & Paid Campaigns", "Conversion Funnel Optimization", "Analytics & Reporting"],
     accent: "#475569", // grey
     bg: "#F8FAFC",
   },
   {
-    icon: Cloud,
-    title: "Software & Cloud Engineering",
-    copy: "Scalable, secure custom software and cloud infrastructure built to handle enterprise workloads with zero downtime.",
+    id: "service-consulting-services",
+    icon: Users,
+    title: "Consulting Services",
+    copy: "Enterprise IT consulting for teams weighing build, buy, or modernize decisions — architecture reviews, technology roadmaps, and hands-on delivery support.",
+    subServices: ["Architecture Reviews", "Technology Roadmaps", "Delivery Support"],
     accent: "#0D9488",
     bg: "#F0FDFA",
   },
   {
-    icon: LineChart,
-    title: "Performance Digital Marketing",
-    copy: "Data-driven PPC and funnel optimization that consistently deliver measurable ROI and qualified sales leads.",
+    id: "service-erp-solutions",
+    icon: Database,
+    title: "ERP Solutions",
+    copy: "Multi-company, multi-user ERP systems that give you real-time control over inventory, sales, and operations, built for a fast, cost-effective rollout.",
+    subServices: ["Multi-Company, Multi-User Setup", "Inventory & Operations Management", "Fast, Cost-Effective Rollout"],
     accent: "#0891B2",
     bg: "#ECFEFF",
   },
   {
-    icon: Network,
-    title: "Strategic Tech Consulting",
-    copy: "Senior tech architecture and ERP integration to streamline operations and eliminate technical debt.",
+    id: "service-cloud-transformation",
+    icon: Cloud,
+    title: "Cloud Transformation",
+    copy: "Enterprise structure advisory and software portfolio reviews that plan and execute your move to modern cloud infrastructure.",
+    subServices: ["Enterprise Structure Advisory", "Digital Transformation Consulting", "Software Portfolio Advisory"],
     accent: "#475569",
     bg: "#F8FAFC",
   },
@@ -56,14 +68,16 @@ export default function ValueProps() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {VALUE_PROPS.map(({ icon: Icon, title, copy, accent, bg }) => (
+          {VALUE_PROPS.map(({ id, icon: Icon, title, copy, subServices, accent, bg }) => (
             <div
               key={title}
+              id={id}
               className="group relative p-8 rounded-2xl transition-all duration-300"
               style={{
                 background: "#ffffff",
                 border: "1px solid #E2E8F0",
                 boxShadow: "0 1px 3px rgba(15,23,42,0.06)",
+                scrollMarginTop: "96px",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = accent;
@@ -83,9 +97,17 @@ export default function ValueProps() {
                 <Icon className="w-7 h-7" style={{ color: accent }} />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">{title}</h3>
-              <p style={{ color: "#64748B" }} className="leading-relaxed">
+              <p style={{ color: "#64748B" }} className="leading-relaxed mb-4">
                 {copy}
               </p>
+              <ul className="space-y-1.5">
+                {subServices.map((s) => (
+                  <li key={s} className="flex items-start gap-2 text-sm" style={{ color: "#64748B" }}>
+                    <span className="mt-1.5 w-1 h-1 rounded-full shrink-0" style={{ background: accent }} />
+                    {s}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

@@ -6,23 +6,33 @@
 const PROJECTS = [
   {
     title: "SaaS Analytics Dashboard",
-    category: "Web App",
+    category: "Software Development",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "E-commerce Platform Rebuild",
-    category: "Website",
-    image: "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=800&q=80",
+    title: "Field Services Mobile App",
+    category: "Mobile App Development",
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Field Services Mobile App",
-    category: "Mobile App",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
+    title: "Multi-Channel Growth Campaign",
+    category: "Digital Marketing",
+    image: "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Enterprise Tech Roadmap",
+    category: "Consulting Services",
+    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Multi-Site Inventory ERP",
+    category: "ERP Solutions",
+    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Cloud Migration & DevOps",
-    category: "Cloud Engineering",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    category: "Cloud Transformation",
+    image: "https://images.unsplash.com/photo-1667984390538-3dea7a3fe33d?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -37,7 +47,7 @@ export default function Portfolio() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {PROJECTS.map((p) => (
             <div
               key={p.title}

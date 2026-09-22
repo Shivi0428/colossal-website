@@ -68,7 +68,7 @@ export default function Hero() {
           enterprise growth — backed by guaranteed SLA commitments.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
           <a
             href="#lead-capture"
             className="px-8 py-4 rounded-xl font-bold text-base text-white transition-transform hover:scale-105"
@@ -88,6 +88,21 @@ export default function Hero() {
           >
             View Our Recent Work
           </a>
+        </div>
+
+        {/* Hero visual - team at work, framed like a floating card */}
+        <div className="relative max-w-3xl mx-auto mb-16">
+          <div
+            className="absolute -inset-3 rounded-3xl"
+            style={{ background: "linear-gradient(135deg, rgba(13,148,136,0.25), rgba(8,145,178,0.25))", filter: "blur(18px)" }}
+          />
+          <img
+            src="https://images.unsplash.com/photo-1748345952129-3bdd7d39f155?auto=format&fit=crop&w=1400&q=80"
+            alt="The Colossal Info Solutions engineering and marketing team collaborating"
+            loading="lazy"
+            className="relative w-full rounded-2xl object-cover"
+            style={{ aspectRatio: "16/8", border: "1px solid #E2E8F0", boxShadow: "0 20px 40px -12px rgba(15,23,42,0.2)" }}
+          />
         </div>
 
         {/* Trust bar - continuous scrolling ticker */}
